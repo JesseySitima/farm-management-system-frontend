@@ -3,11 +3,52 @@ import { useState } from 'react'
 import { Outlet, NavLink, useNavigate } from 'react-router-dom'
 import {
   Sprout,
-  LayoutDashboard,
   LogOut,
   Menu,
   X,
+  LayoutDashboard,
+  Warehouse,
+  Users,
+  ShieldCheck,
+  ChartColumn,
+  Settings,
+  Beef,
+  Wallet,
+  Heart,
+  HeartPulse,
+  ClipboardList,
+  ListChecks,
+  TrendingUp,
+  TrendingDown,
+  Receipt,
+  Boxes,
+  Package,
+  Truck,
 } from 'lucide-react'
+
+import { navigationByRole } from '../config/navigation'
+import type { UserRole } from '../types/auth'
+
+const iconMap = {
+  'layout-dashboard': LayoutDashboard,
+  warehouse: Warehouse,
+  users: Users,
+  'shield-check': ShieldCheck,
+  'chart-column': ChartColumn,
+  settings: Settings,
+  beef: Beef,
+  wallet: Wallet,
+  heart: Heart,
+  'heart-pulse': HeartPulse,
+  'clipboard-list': ClipboardList,
+  'list-checks': ListChecks,
+  'trending-up': TrendingUp,
+  'trending-down': TrendingDown,
+  receipt: Receipt,
+  boxes: Boxes,
+  package: Package,
+  truck: Truck,
+}
 
 function MainLayout() {
   const navigate = useNavigate()
@@ -16,6 +57,9 @@ function MainLayout() {
   const user = JSON.parse(
     sessionStorage.getItem('user') || '{}'
   )
+
+  const role = user.role_name as UserRole
+  const navigationItems = navigationByRole[role] || []
 
   const handleLogout = () => {
     sessionStorage.removeItem('access_token')
@@ -100,20 +144,31 @@ function MainLayout() {
             Main Menu
           </p>
 
-          <NavLink
-            to="/dashboard"
-            onClick={() => setSidebarOpen(false)}
-            className={({ isActive }) =>
-              `flex items-center gap-3 px-3 py-3 rounded-lg
-              text-sm font-medium transition
-              ${isActive
-                ? 'bg-green-50 text-green-800'
-                : 'text-gray-600 hover:bg-gray-50'}`
-            }
-          >
-            <LayoutDashboard size={19} />
-            Dashboard
-          </NavLink>
+          <nav className="space-y-1">
+            {navigationItems.map((item) => {
+              const Icon = iconMap[
+                item.icon as keyof typeof iconMap
+              ]
+
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setSidebarOpen(false)}
+                  className={({ isActive }) =>
+                    `flex items-center gap-3 px-3 py-3 rounded-lg
+                    text-sm font-medium transition
+                    ${isActive
+                      ? 'bg-green-50 text-green-800'
+                      : 'text-gray-600 hover:bg-gray-50'}`
+                  }
+                >
+                  {Icon && <Icon size={19} />}
+                  {item.label}
+                </NavLink>
+              )
+            })}
+          </nav>
         </aside>
 
         {/* Scrollable page content */}

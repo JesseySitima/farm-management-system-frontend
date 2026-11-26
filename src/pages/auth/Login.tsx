@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Eye, EyeOff, Sprout } from "lucide-react";
-import { login } from "../services/auth";
+import { login } from "../../services/auth";
 
 function Login() {
   const [showPassword, setShowPassword] = useState(false);

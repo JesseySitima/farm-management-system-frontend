@@ -1,23 +1,10 @@
-
 import api from './api'
-
-export interface User {
-  id: string
-  first_name: string
-  last_name: string
-  email: string
-  phone: string
-  role_id: string
-  role_name: string
-}
+import type { AuthData } from '../types/auth'
 
 interface LoginResponse {
   success: boolean
   message: string
-  data: {
-    token: string
-    user: User
-  }
+  data: AuthData
 }
 
 export const login = async (
