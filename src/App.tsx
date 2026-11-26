@@ -1,20 +1,10 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
-import Login from "./pages/auth/Login";
-import ProtectedRoute from "./components/ProtectedRoutes";
-import MainLayout from "./layouts/MainLayout";
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
-function Dashboard() {
-  return (
-    <div>
-      <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-
-      <p className="mt-2 text-gray-500">
-        Welcome to your farm management system.
-      </p>
-    </div>
-  );
-}
+import Login from './pages/auth/Login'
+import Dashboard from './pages/dashboards/Dashboard'
+import ProtectedRoute from './components/ProtectedRoutes'
+import MainLayout from './layouts/MainLayout'
 
 function App() {
   return (
@@ -31,7 +21,7 @@ function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App
