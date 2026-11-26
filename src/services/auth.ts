@@ -1,5 +1,5 @@
 import api from './api'
-import type { AuthData } from '../types/auth'
+import type { User, AuthData } from '../types/auth'
 
 interface LoginResponse {
   success: boolean
@@ -15,6 +15,32 @@ export const login = async (
     email,
     password,
   })
+
+  return response.data
+}
+
+export interface RegisterUserData {
+  first_name: string
+  last_name: string
+  email: string
+  phone?: string
+  password: string
+  role_id?: string
+}
+
+export interface RegisterResponse {
+  success: boolean
+  message: string
+  data?: User
+}
+
+export const registerUser = async (
+  userData: RegisterUserData
+): Promise<RegisterResponse> => {
+  const response = await api.post<RegisterResponse>(
+    '/auth/register',
+    userData
+  )
 
   return response.data
 }
