@@ -18,6 +18,7 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
 
   'Farm Owner': [
     { label: 'Dashboard', path: '/dashboard', icon: 'layout-dashboard' },
+    { label: 'Farms', path: '/farms', icon: 'warehouse' },
     { label: 'Livestock', path: '/livestock', icon: 'beef' },
     { label: 'Staff', path: '/staff', icon: 'users' },
     { label: 'Finances', path: '/finances', icon: 'wallet' },

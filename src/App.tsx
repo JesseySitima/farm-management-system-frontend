@@ -6,6 +6,7 @@ import Dashboard from './pages/dashboards/Dashboard'
 import ProtectedRoute from './components/ProtectedRoutes'
 import MainLayout from './layouts/MainLayout'
 import UsersPage from './pages/users/Users'
+import FarmsPage from './pages/farms/Farms'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route element={<MainLayout />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/users" element={<UsersPage />} />
+            <Route path="/farms" element={<FarmsPage />} />
           </Route>
         </Route>
 
