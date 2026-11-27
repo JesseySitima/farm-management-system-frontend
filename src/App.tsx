@@ -10,6 +10,7 @@ import SpeciesPage from "./pages/farms/species/Species";
 import LivestockPage from "./pages/livestock/Livestock";
 import FlocksPage from "./pages/farms/flocks/Flocks";
 import InventoryCategoriesPage from "./pages/inventory/InventoryCategories";
+import Suppliers from "./pages/inventory/Suppliers";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               path="/inventory/categories"
               element={<InventoryCategoriesPage />}
             />
+            <Route path="/suppliers" element={<Suppliers />} />
           </Route>
         </Route>
 
