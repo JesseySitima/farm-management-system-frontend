@@ -6,7 +6,6 @@ import {
   RefreshCw,
   Search,
   Package,
-  TrendingUp,
   AlertTriangle,
   ArrowLeftRight,
 } from 'lucide-react'

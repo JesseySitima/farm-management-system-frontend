@@ -81,3 +81,38 @@ export const getStockBalances = async (): Promise<StockBalance[]> => {
 
   return response.data.data
 }
+
+
+export interface IssueStockData {
+  farm_id: string
+  inventory_item_id: string
+  quantity: number
+  movement_date?: string
+  notes?: string
+  reference_id?: string
+  reference_type?: string
+}
+
+export interface CreateStockAdjustmentData {
+  adjustment_direction: 'increase' | 'decrease'
+  farm_id: string
+  inventory_item_id: string
+  quantity: number
+  reason: string
+  movement_date?: string
+}
+
+
+export const issueStock = async (
+  issueData: IssueStockData
+): Promise<void> => {
+  await api.post('/stock-movements/issues', issueData)
+}
+
+export const createStockAdjustment = async (
+  adjustmentData: CreateStockAdjustmentData
+): Promise<void> => {
+  await api.post('/stock-movements/adjustments', adjustmentData)
+}
+
+
