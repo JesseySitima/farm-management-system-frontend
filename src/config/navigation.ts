@@ -66,6 +66,12 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
       icon: "package",
       section: "Collections Management",
     },
+     {
+      label: "Collections",
+      path: "/product-collections",
+      icon: "package",
+      section: "Collections Management",
+    },
     {
       label: "Livestock",
       path: "/livestock",
