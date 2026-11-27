@@ -12,6 +12,7 @@ import FlocksPage from "./pages/farms/flocks/Flocks";
 import InventoryCategoriesPage from "./pages/inventory/InventoryCategories";
 import Suppliers from "./pages/inventory/Suppliers";
 import InventoryItems from './pages/inventory/InventoryItems'
+import StockReceiving from './pages/inventory/StockReceiving'
 
 function App() {
   return (
@@ -33,7 +34,9 @@ function App() {
               element={<InventoryCategoriesPage />}
             />
             <Route path="/suppliers" element={<Suppliers />} />
-            <Route path="/inventory/items" element={<InventoryItems />} />
+            <Route path="/inventory/items" element={<InventoryItems />
+          } />
+          <Route path="inventory/stock-receiving" element={<StockReceiving />} />
           </Route>
         </Route>
 
