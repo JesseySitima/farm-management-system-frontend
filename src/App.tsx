@@ -19,6 +19,7 @@ import InventoryItems from "./pages/inventory/InventoryItems";
 import StockReceiving from "./pages/inventory/StockReceiving";
 import StockMovements from "./pages/inventory/StockMovements";
 import Inventory from './pages/inventory/Inventory'
+import Products from "./pages/collections/Product";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
               element={<StockMovements />}
             />
             <Route path="/inventory" element={<Inventory />} />
+            <Route path="/products" element={<Products/>} />
           </Route>
         </Route>
 

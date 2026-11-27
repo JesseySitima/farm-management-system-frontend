@@ -61,6 +61,12 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
       section: "Farm Management",
     },
     {
+      label: "Products",
+      path: "/products",
+      icon: "package",
+      section: "Collections Management",
+    },
+    {
       label: "Livestock",
       path: "/livestock",
       icon: "beef",
@@ -108,13 +114,13 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
       icon: "tags",
       section: "Inventory Management",
     },
-     {
+    {
       label: "Inventory Items",
       path: "/inventory/items",
       icon: "tags",
       section: "Inventory Management",
     },
-     {
+    {
       label: "Stock Receiving",
       path: "inventory/stock-receiving",
       icon: "tags",
