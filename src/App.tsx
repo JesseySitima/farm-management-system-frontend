@@ -18,6 +18,7 @@ import Suppliers from "./pages/inventory/Suppliers";
 import InventoryItems from "./pages/inventory/InventoryItems";
 import StockReceiving from "./pages/inventory/StockReceiving";
 import StockMovements from "./pages/inventory/StockMovements";
+import Inventory from './pages/inventory/Inventory'
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function App() {
               path="/inventory/stock-movements"
               element={<StockMovements />}
             />
+            <Route path="/inventory" element={<Inventory />} />
           </Route>
         </Route>
 
