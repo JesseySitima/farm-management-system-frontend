@@ -8,6 +8,7 @@ import UsersPage from "./pages/users/Users";
 import FarmsPage from "./pages/farms/Farms";
 import SpeciesPage from "./pages/farms/species/Species";
 import LivestockPage from "./pages/livestock/Livestock";
+import FlocksPage from "./pages/farms/flocks/Flocks";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/farms" element={<FarmsPage />} />
             <Route path="/species" element={<SpeciesPage />} />
             <Route path="/livestock" element={<LivestockPage />} />
+            <Route path="/flocks" element={<FlocksPage />} />
           </Route>
         </Route>
 

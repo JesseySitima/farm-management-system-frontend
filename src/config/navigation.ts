@@ -20,6 +20,7 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
     { label: 'Dashboard', path: '/dashboard', icon: 'layout-dashboard' },
     { label: 'Farms', path: '/farms', icon: 'warehouse' },
     { label: 'Livestock', path: '/livestock', icon: 'beef' },
+     { label: 'Flocks', path: '/flocks', icon: 'users' },
      { label: 'Species', path: '/species', icon: 'beef' },
     { label: 'Staff', path: '/staff', icon: 'users' },
     { label: 'Finances', path: '/finances', icon: 'wallet' },
