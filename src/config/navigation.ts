@@ -108,6 +108,12 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
       icon: "tags",
       section: "Inventory Management",
     },
+     {
+      label: "Inventory Items",
+      path: "/inventory/items",
+      icon: "tags",
+      section: "Inventory Management",
+    },
     {
       label: "Stock Movements",
       path: "/stock-movements",
