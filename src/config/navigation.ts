@@ -122,7 +122,7 @@ export const navigationByRole: Record<UserRole, NavigationItem[]> = {
     },
     {
       label: "Stock Movements",
-      path: "/stock-movements",
+      path: "/inventory/stock-movements",
       icon: "arrow-left-right",
       section: "Inventory Management",
     },
